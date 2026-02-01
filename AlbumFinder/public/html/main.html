@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>winky's album finder</title>
+    <link rel="stylesheet" href="/public/styles/style.css">
+
+</head>
+
+<body onload="getRandomTag()">
+
+    <div id="container">
+        <h1 id="title">Random Album Finder</h1>
+        <div id="album-display">
+            <img id="album-cover" src="" alt="" width="400px" height="300px">
+            <div id="album-info">
+                <a href="" id="album-link" target="_blank">
+
+                    <h2 id="album-name"></h2>
+                </a>
+                <a href="" id="artist-link" target="_blank">
+                    <p id="artist-name"></p>
+                </a>
+            </div>
+        </div>
+
+        <button onclick="getRandomTag()"> Generate Next Album</button>
+    </div>
+
+
+    <script src="/public/scripts/script.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,103 @@
+@font-face {
+    font-family: "FivoSans";
+    src: url(/fonts/fivosans.otf);
+}
+
+body {
+    background-color: #1E1E2E;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+    color: antiquewhite;
+}
+
+#container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#album-display {
+    padding-bottom: 15px;
+    width: 450px;
+    height: auto;
+    opacity: 90;
+    background-color: #10101b52;
+    text-align: center;
+    border-radius: 15px;
+    font-family: "FivoSans";
+}
+
+#album-cover {
+    margin-top: 25px;
+    border-radius: 5px;
+}
+
+#title {
+    user-select: none;
+    padding: 15px;
+    display: inline-block;
+    background-color: #10101b52;
+    border-radius: 10px;
+    font-family: "FivoSans";
+}
+
+#album-info {
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 0;
+
+
+
+}
+
+a{
+    text-decoration: none;
+}
+
+#album-name {
+    text-decoration: none;
+
+    width: fit-content;
+    margin: 10px;
+    padding: 10px;
+    background-color: #11111a59;
+    border-radius: 5px;
+    color: antiquewhite;
+
+}
+
+#artist-name {
+    text-decoration: none;
+
+
+
+    color: antiquewhite;
+    display: inline-block;
+    margin: 0;
+    width: fit-content;
+    padding: 10px;
+    background-color: #11111a59;
+    border-radius: 5px;
+
+}
+
+button {
+    background-color: #10101b52;
+    border: none;
+    padding: 10px;
+    margin-top: 15px;
+    border-radius: 5px;
+    color: antiquewhite;
+    font-family: "FivoSans";
+
+}
+
+button:active {
+    color: rgb(46, 45, 43);
+}
