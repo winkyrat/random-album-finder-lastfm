@@ -1,4 +1,4 @@
-var apiKey = process.env.MY_API_KEY
+var apiKey = "f279de2a002e091c197e43a676ba1e2e"
 
 
 
@@ -100,6 +100,7 @@ function getAlbumJson(name, limit) {
         .then(data => console.log(data.results.albummatches))
         .catch(error => console.log(error))
 }
+
 
 
 
