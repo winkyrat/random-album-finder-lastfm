@@ -26,7 +26,7 @@ function getRandomTag() {
 
 function getAlbumFromTag(tagName) {
 
-    var search = `http://ws.audioscrobbler.com/2.0/?method=tag.gettopalbums&tag=${tagName}&api_key=${apiKey}&format=json`
+    var search = `https://ws.audioscrobbler.com/2.0/?method=tag.gettopalbums&tag=${tagName}&api_key=${apiKey}&format=json`
 
     return fetch(search)
         .then(response => response.json())
@@ -45,7 +45,7 @@ function getAlbumFromTag(tagName) {
 
 function getAlbumPage(tagName, page, inPage) {
 
-    var search = `http://ws.audioscrobbler.com/2.0/?method=tag.gettopalbums&tag=${tagName}&api_key=${apiKey}&format=json&page=${page}&limit=50`
+    var search = `https://ws.audioscrobbler.com/2.0/?method=tag.gettopalbums&tag=${tagName}&api_key=${apiKey}&format=json&page=${page}&limit=50`
 
     return fetch(search)
         .then(response => response.json())
@@ -62,7 +62,7 @@ function getAlbumPage(tagName, page, inPage) {
 
 
 function getTopTags() {
-    var searchTag = `http://ws.audioscrobbler.com/2.0/?method=tag.getTopTags&api_key=${apiKey}&format=json`
+    var searchTag = `https://ws.audioscrobbler.com/2.0/?method=tag.getTopTags&api_key=${apiKey}&format=json`
     var toReturn;
     return fetch(searchTag)
         .then(response => response.json())
@@ -73,7 +73,7 @@ function getTopTags() {
 
 
 function getInfoTag(genre) {
-    var searchTag = `http://ws.audioscrobbler.com/2.0/?method=tag.getinfo&tag=${genre}&api_key=${apiKey}&format=json`
+    var searchTag = `https://ws.audioscrobbler.com/2.0/?method=tag.getinfo&tag=${genre}&api_key=${apiKey}&format=json`
     fetch(searchTag)
         .then(response => response.json())
         .then(data => console.log(data))
@@ -82,7 +82,7 @@ function getInfoTag(genre) {
 }
 
 function getTopAlbumsTag(genre) {
-    var searchTag = `http://ws.audioscrobbler.com/2.0/?method=tag.gettopalbums&tag=${genre}&api_key=${apiKey}&format=json`
+    var searchTag = `https://ws.audioscrobbler.com/2.0/?method=tag.gettopalbums&tag=${genre}&api_key=${apiKey}&format=json`
     fetch(searchTag)
         .then(response => response.json())
         .then(data => console.log(data))
@@ -91,7 +91,7 @@ function getTopAlbumsTag(genre) {
 
 
 function getAlbumJson(name, limit) {
-    var searchByName = `http://ws.audioscrobbler.com/2.0/?method=album.search&album=${name}&api_key=${apiKey}&format=json&limit=${limit}&page=5`
+    var searchByName = `https://ws.audioscrobbler.com/2.0/?method=album.search&album=${name}&api_key=${apiKey}&format=json&limit=${limit}&page=5`
 
     // data -> results -> albummatches -> album (find album by name pathing)
 
@@ -100,4 +100,5 @@ function getAlbumJson(name, limit) {
         .then(data => console.log(data.results.albummatches))
         .catch(error => console.log(error))
 }
+
 
